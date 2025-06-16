@@ -50,7 +50,7 @@ const AssignmentList = () => {
           (assignment) => assignment.assigned_by_id == user!.id,
         )
       else
-        results = results.filter((assignment) => assignment.user_id != user!.id)
+        results = results.filter((assignment) => assignment.user_id == user!.id)
     }
 
     results = results.sort(
