@@ -1,8 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 import Login from '../pages/Login'
+import AssetList from '../pages/Assets/AssetList'
+import AssetDetail from '../pages/Assets/AssetDetail'
 import PrivateRoute from '../components/PrivateRoute'
 import Layout from '../components/Layout'
+import EditAssetForm from '../pages/Assets/EditAsset'
+import NewAssetForm from '../pages/Assets/NewAsset'
+import RequestAssetPage from '../pages/Assets/RequestAsset'
+import CheckOutAssetPage from '../pages/Assets/CheckoutAsset'
 import NotFound from '../pages/Errors/NotFound'
+import AssetLabelsPage from '../pages/Assets/AssetLabelsPage'
+import LinkAssetsPage from '../pages/Assets/LinkAssets'
 
 export default function AppRoutes() {
   return (
@@ -36,7 +44,7 @@ export default function AppRoutes() {
           path="assets"
           element={
             <PrivateRoute roles={[['ReadAsset']]}>
-              <></>
+              <AssetList />
             </PrivateRoute>
           }
         />
@@ -44,7 +52,7 @@ export default function AppRoutes() {
           path="assets/new"
           element={
             <PrivateRoute roles={[['CreateEditAsset']]}>
-              <></>
+              <NewAssetForm />
             </PrivateRoute>
           }
         />
@@ -52,7 +60,7 @@ export default function AppRoutes() {
           path="assets/:id/edit"
           element={
             <PrivateRoute roles={[['ReadAsset', 'CreateEditAsset']]}>
-              <></>
+              <EditAssetForm />
             </PrivateRoute>
           }
         />
@@ -60,7 +68,7 @@ export default function AppRoutes() {
           path="assets/:id/check-out"
           element={
             <PrivateRoute roles={[['CheckInOutAsset']]}>
-              <></>
+              <CheckOutAssetPage />
             </PrivateRoute>
           }
         />
@@ -68,7 +76,7 @@ export default function AppRoutes() {
           path="assets/:id/request"
           element={
             <PrivateRoute roles={[['ReadAsset', 'RequestAsset']]}>
-              <></>
+              <RequestAssetPage />
             </PrivateRoute>
           }
         />
@@ -76,7 +84,7 @@ export default function AppRoutes() {
           path="assets/:id"
           element={
             <PrivateRoute roles={[['ReadAsset']]}>
-              <></>
+              <AssetDetail />
             </PrivateRoute>
           }
         />
@@ -84,7 +92,7 @@ export default function AppRoutes() {
           path="assets/:id/labels"
           element={
             <PrivateRoute roles={[['ReadAsset', 'CreateEditAsset']]}>
-              <></>
+              <AssetLabelsPage />
             </PrivateRoute>
           }
         />
@@ -92,7 +100,7 @@ export default function AppRoutes() {
           path="assets/:id/link"
           element={
             <PrivateRoute roles={[['ReadAsset', 'LinkAsset']]}>
-              <></>
+              <LinkAssetsPage />
             </PrivateRoute>
           }
         />
