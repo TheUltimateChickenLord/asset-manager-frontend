@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import PrivateRoute from '../components/PrivateRoute'
+import Layout from '../components/Layout'
 import NotFound from '../pages/Errors/NotFound'
 
 export default function AppRoutes() {
@@ -18,7 +19,7 @@ export default function AppRoutes() {
         path="/"
         element={
           <PrivateRoute>
-            <></>
+            <Layout />
           </PrivateRoute>
         }
       >
