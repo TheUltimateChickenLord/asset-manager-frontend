@@ -3,6 +3,7 @@ import Login from '../pages/Login'
 import AssetList from '../pages/Assets/AssetList'
 import AssetDetail from '../pages/Assets/AssetDetail'
 import UserList from '../pages/Users/UserList'
+import Dashboard from '../pages/Dashboard'
 import PrivateRoute from '../components/PrivateRoute'
 import Layout from '../components/Layout'
 import EditAssetForm from '../pages/Assets/EditAsset'
@@ -46,7 +47,7 @@ export default function AppRoutes() {
           index
           element={
             <PrivateRoute>
-              <></>
+              <Dashboard />
             </PrivateRoute>
           }
         />
