@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from '../pages/Login'
 import AssetList from '../pages/Assets/AssetList'
 import AssetDetail from '../pages/Assets/AssetDetail'
+import UserList from '../pages/Users/UserList'
 import PrivateRoute from '../components/PrivateRoute'
 import Layout from '../components/Layout'
 import EditAssetForm from '../pages/Assets/EditAsset'
@@ -9,11 +10,15 @@ import NewAssetForm from '../pages/Assets/NewAsset'
 import RequestAssetPage from '../pages/Assets/RequestAsset'
 import RequestList from '../pages/Requests/RequestList'
 import RequestDetail from '../pages/Requests/RequestDetail'
+import UserDetail from '../pages/Users/UserDetail'
 import CheckOutAssetPage from '../pages/Assets/CheckoutAsset'
 import NotFound from '../pages/Errors/NotFound'
+import UserForm from '../pages/Users/UserForm'
 import AssignmentList from '../pages/Assignments/AssignmentList'
 import AssignmentDetail from '../pages/Assignments/AssignmentDetail'
+import UserLabelsPage from '../pages/Users/UserLabelsPage'
 import AssetLabelsPage from '../pages/Assets/AssetLabelsPage'
+import UserRolesPage from '../pages/Users/UserRolesPage'
 import CheckOutRequestPage from '../pages/Requests/CheckoutRequest'
 import LinkAssetsPage from '../pages/Assets/LinkAssets'
 
@@ -113,7 +118,7 @@ export default function AppRoutes() {
           path="users"
           element={
             <PrivateRoute roles={[['ReadUser']]}>
-              <></>
+              <UserList />
             </PrivateRoute>
           }
         />
@@ -121,7 +126,7 @@ export default function AppRoutes() {
           path="users/new"
           element={
             <PrivateRoute roles={[['CreateEditUser']]}>
-              <></>
+              <UserForm />
             </PrivateRoute>
           }
         />
@@ -129,7 +134,7 @@ export default function AppRoutes() {
           path="users/:id"
           element={
             <PrivateRoute roles={[['ReadUser']]}>
-              <></>
+              <UserDetail />
             </PrivateRoute>
           }
         />
@@ -137,7 +142,7 @@ export default function AppRoutes() {
           path="users/:id/labels"
           element={
             <PrivateRoute roles={[['ReadUser', 'CreateEditUser']]}>
-              <></>
+              <UserLabelsPage />
             </PrivateRoute>
           }
         />
@@ -145,7 +150,7 @@ export default function AppRoutes() {
           path="users/:id/roles"
           element={
             <PrivateRoute roles={[['ReadUser', 'CreateEditUser']]}>
-              <></>
+              <UserRolesPage />
             </PrivateRoute>
           }
         />
