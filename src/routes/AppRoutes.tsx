@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import Login from '../pages/Login'
 import PrivateRoute from '../components/PrivateRoute'
 import Layout from '../components/Layout'
 import NotFound from '../pages/Errors/NotFound'
@@ -6,7 +7,7 @@ import NotFound from '../pages/Errors/NotFound'
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/login" element={<></>} />
+      <Route path="/login" element={<Login />} />
       <Route
         path="/reset-password"
         element={
