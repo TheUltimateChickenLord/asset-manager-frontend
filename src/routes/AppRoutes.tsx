@@ -8,6 +8,8 @@ import Layout from '../components/Layout'
 import EditAssetForm from '../pages/Assets/EditAsset'
 import NewAssetForm from '../pages/Assets/NewAsset'
 import RequestAssetPage from '../pages/Assets/RequestAsset'
+import RequestList from '../pages/Requests/RequestList'
+import RequestDetail from '../pages/Requests/RequestDetail'
 import UserDetail from '../pages/Users/UserDetail'
 import CheckOutAssetPage from '../pages/Assets/CheckoutAsset'
 import NotFound from '../pages/Errors/NotFound'
@@ -17,6 +19,7 @@ import AssignmentDetail from '../pages/Assignments/AssignmentDetail'
 import UserLabelsPage from '../pages/Users/UserLabelsPage'
 import AssetLabelsPage from '../pages/Assets/AssetLabelsPage'
 import UserRolesPage from '../pages/Users/UserRolesPage'
+import CheckOutRequestPage from '../pages/Requests/CheckoutRequest'
 import LinkAssetsPage from '../pages/Assets/LinkAssets'
 
 export default function AppRoutes() {
@@ -155,7 +158,7 @@ export default function AppRoutes() {
           path="requests"
           element={
             <PrivateRoute roles={[['CheckInOutAsset'], ['RequestAsset']]}>
-              <></>
+              <RequestList />
             </PrivateRoute>
           }
         />
@@ -163,7 +166,7 @@ export default function AppRoutes() {
           path="requests/:id"
           element={
             <PrivateRoute roles={[['CheckInOutAsset'], ['RequestAsset']]}>
-              <></>
+              <RequestDetail />
             </PrivateRoute>
           }
         />
@@ -171,7 +174,7 @@ export default function AppRoutes() {
           path="requests/:id/check-out"
           element={
             <PrivateRoute roles={[['CheckInOutAsset'], ['RequestAsset']]}>
-              <></>
+              <CheckOutRequestPage />
             </PrivateRoute>
           }
         />
