@@ -9,6 +9,8 @@ import NewAssetForm from '../pages/Assets/NewAsset'
 import RequestAssetPage from '../pages/Assets/RequestAsset'
 import CheckOutAssetPage from '../pages/Assets/CheckoutAsset'
 import NotFound from '../pages/Errors/NotFound'
+import AssignmentList from '../pages/Assignments/AssignmentList'
+import AssignmentDetail from '../pages/Assignments/AssignmentDetail'
 import AssetLabelsPage from '../pages/Assets/AssetLabelsPage'
 import LinkAssetsPage from '../pages/Assets/LinkAssets'
 
@@ -172,7 +174,7 @@ export default function AppRoutes() {
           path="assignments"
           element={
             <PrivateRoute>
-              <></>
+              <AssignmentList />
             </PrivateRoute>
           }
         />
@@ -180,7 +182,7 @@ export default function AppRoutes() {
           path="assignments/:id"
           element={
             <PrivateRoute>
-              <></>
+              <AssignmentDetail />
             </PrivateRoute>
           }
         />
