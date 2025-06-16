@@ -20,6 +20,7 @@ import AssignmentDetail from '../pages/Assignments/AssignmentDetail'
 import UserLabelsPage from '../pages/Users/UserLabelsPage'
 import AssetLabelsPage from '../pages/Assets/AssetLabelsPage'
 import UserRolesPage from '../pages/Users/UserRolesPage'
+import ResetPassword from '../pages/ResetPassword'
 import CheckOutRequestPage from '../pages/Requests/CheckoutRequest'
 import LinkAssetsPage from '../pages/Assets/LinkAssets'
 
@@ -31,7 +32,7 @@ export default function AppRoutes() {
         path="/reset-password"
         element={
           <PrivateRoute>
-            <></>
+            <ResetPassword />
           </PrivateRoute>
         }
       />
