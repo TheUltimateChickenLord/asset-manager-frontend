@@ -18,7 +18,7 @@ export default function ConfirmAlert({
   popupMessageFailure: string
   open: boolean
   onClose: (confirm: boolean) => Promise<boolean>
-  onComplete: () => void
+  onComplete: (success: boolean) => void
   closePopup: () => void
 }) {
   const [status, setStatus] = useState<'success' | 'failure'>('success')
@@ -44,7 +44,7 @@ export default function ConfirmAlert({
   const handleAlertClose = () => {
     setOpenWindow(0)
     closePopup()
-    onComplete()
+    onComplete(status == 'success')
   }
 
   return (

@@ -18,7 +18,7 @@ const LinkedRow = ({
   assets: Asset[]
   trigger: () => void
 }) => {
-  const filteredLinks = asset.linked_to.filter(
+  const filteredLinks = asset.linked_assets.filter(
     (link) => link.relation == relation,
   )
 
@@ -88,8 +88,8 @@ const AssetChip = ({
   return (
     <>
       <Chip
-        label={`#${linkedAsset.asset_id}`}
-        onClick={() => navigate(`/assets/${linkedAsset.asset_id}`)}
+        label={`#${linkedAsset.linked_id}`}
+        onClick={() => navigate(`/assets/${linkedAsset.linked_id}`)}
         color="default"
         sx={{ textDecoration: 'none', cursor: 'pointer' }}
         onDelete={askConfirmDeleteLink}

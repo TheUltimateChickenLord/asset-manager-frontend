@@ -12,7 +12,7 @@ export const getCurrentUser = async (): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getUsers = async (): Promise<User[]> => {
@@ -26,7 +26,7 @@ export const getUsers = async (): Promise<User[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getUserById = async (id: number): Promise<User> => {
@@ -40,7 +40,7 @@ export const getUserById = async (id: number): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const createUser = async (data: CreateUser): Promise<User> => {
@@ -59,7 +59,7 @@ export const createUser = async (data: CreateUser): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const deleteUser = async (id: number): Promise<User> => {
@@ -73,7 +73,7 @@ export const deleteUser = async (id: number): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const disableUser = async (id: number): Promise<User> => {
@@ -87,7 +87,7 @@ export const disableUser = async (id: number): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const enableUser = async (id: number): Promise<User> => {
@@ -101,7 +101,7 @@ export const enableUser = async (id: number): Promise<User> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const resetPasswordUser = async (id: number): Promise<string> => {
@@ -115,7 +115,7 @@ export const resetPasswordUser = async (id: number): Promise<string> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const resetPasswordSelf = async (password: string): Promise<string> => {
@@ -134,5 +134,5 @@ export const resetPasswordSelf = async (password: string): Promise<string> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }

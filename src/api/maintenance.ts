@@ -19,7 +19,7 @@ export const checkInAssetMaintenance = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const checkOutAssetMaintenance = async (
@@ -40,5 +40,5 @@ export const checkOutAssetMaintenance = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
