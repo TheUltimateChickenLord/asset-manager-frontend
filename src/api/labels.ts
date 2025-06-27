@@ -12,7 +12,7 @@ export const getLabels = async (): Promise<Label[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const createLabel = async (name: string): Promise<Label[]> => {
@@ -31,7 +31,7 @@ export const createLabel = async (name: string): Promise<Label[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const assignLabelUser = async (
@@ -56,7 +56,7 @@ export const assignLabelUser = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const deleteLabelUser = async (
@@ -78,7 +78,7 @@ export const deleteLabelUser = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const assignLabelAsset = async (
@@ -103,7 +103,7 @@ export const assignLabelAsset = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const deleteLabelAsset = async (
@@ -125,5 +125,5 @@ export const deleteLabelAsset = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }

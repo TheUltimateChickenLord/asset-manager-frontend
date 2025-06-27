@@ -277,7 +277,9 @@ const AssetForm = ({
             popupMessageSuccess="Asset successfully created"
             popupMessageFailure="Could not create asset, try again later"
             onClose={handleConfirmClose}
-            onComplete={() => navigate(`/assets/${id!}`)}
+            onComplete={(success) => {
+              if (success) navigate(`/assets/${id!}`)
+            }}
             closePopup={setCloseConfirm}
           />
         ) : (
@@ -288,7 +290,9 @@ const AssetForm = ({
             popupMessageSuccess="Asset successfully updated"
             popupMessageFailure="Could not update asset, try again later"
             onClose={handleConfirmClose}
-            onComplete={() => navigate(`/assets/${id!}`)}
+            onComplete={(success) => {
+              if (success) navigate(`/assets/${id!}`)
+            }}
             closePopup={setCloseConfirm}
           />
         )}

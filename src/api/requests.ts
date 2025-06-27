@@ -18,7 +18,7 @@ export const getMyRequests = async (): Promise<Request[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getRequests = async (): Promise<Request[]> => {
@@ -32,7 +32,7 @@ export const getRequests = async (): Promise<Request[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const submitRequest = async (
@@ -54,7 +54,7 @@ export const submitRequest = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const approveRequest = async (id: number): Promise<Request> => {
@@ -73,7 +73,7 @@ export const approveRequest = async (id: number): Promise<Request> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const rejectRequest = async (id: number): Promise<Request> => {
@@ -92,7 +92,7 @@ export const rejectRequest = async (id: number): Promise<Request> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getRequestByID = async (id: number): Promise<Request> => {
@@ -106,5 +106,5 @@ export const getRequestByID = async (id: number): Promise<Request> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }

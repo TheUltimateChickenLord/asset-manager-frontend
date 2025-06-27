@@ -50,12 +50,12 @@ async function getDashboards(user: User) {
   if (hasRole(user, 'CheckInOutAsset')) {
     results.push(
       getRequests().then((value) => ({
-        name: 'Requests Pending Your Approval',
+        name: 'Requests You Oversee',
         value: value.filter(
           (request) =>
             request.status == 'Pending' && request.user_id != user.id,
         ).length,
-        link: '/requests?status=Pending&request_type=Pending+Requests',
+        link: '/requests?status=Pending&request_type=Requests+I+Oversee',
       })),
     )
   }

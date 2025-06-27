@@ -41,7 +41,7 @@ export default function LinkAssetsPage() {
     )
 
   const handleLinkAssets = async (confirm: boolean) => {
-    if (assetB != -1 || !relationship || !confirm) return true
+    if (assetB == -1 || !relationship || !confirm) return false
 
     try {
       await linkAssets(assetA.id, assetB, relationship)

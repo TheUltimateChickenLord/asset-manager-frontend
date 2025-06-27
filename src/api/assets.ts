@@ -12,7 +12,7 @@ export const getAssets = async (): Promise<Asset[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getAssetById = async (id: number): Promise<Asset> => {
@@ -26,7 +26,7 @@ export const getAssetById = async (id: number): Promise<Asset> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const addAsset = async (asset: CreateAsset): Promise<Asset> => {
@@ -45,7 +45,7 @@ export const addAsset = async (asset: CreateAsset): Promise<Asset> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const updateAsset = async (
@@ -67,7 +67,7 @@ export const updateAsset = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const deleteAsset = async (id: number): Promise<Asset> => {
@@ -81,7 +81,7 @@ export const deleteAsset = async (id: number): Promise<Asset> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const linkAssets = async (
@@ -107,7 +107,7 @@ export const linkAssets = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const unlinkAssets = async (
@@ -124,5 +124,5 @@ export const unlinkAssets = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }

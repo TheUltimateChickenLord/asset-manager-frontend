@@ -17,7 +17,7 @@ export const checkInAsset = async (asset_id: number): Promise<Assignment> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const checkOutAsset = async (
@@ -38,7 +38,7 @@ export const checkOutAsset = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const checkInAssetByAssignment = async (
@@ -56,7 +56,7 @@ export const checkInAssetByAssignment = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const checkOutAssetByRequest = async (
@@ -80,7 +80,7 @@ export const checkOutAssetByRequest = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const myAssignments = async (): Promise<Assignment[]> => {
@@ -94,7 +94,7 @@ export const myAssignments = async (): Promise<Assignment[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const requestReturnAsset = async (
@@ -116,7 +116,7 @@ export const requestReturnAsset = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getOverdueAssignments = async (
@@ -134,7 +134,7 @@ export const getOverdueAssignments = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const getAssignmentById = async (id: number): Promise<Assignment> => {
@@ -148,5 +148,5 @@ export const getAssignmentById = async (id: number): Promise<Assignment> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }

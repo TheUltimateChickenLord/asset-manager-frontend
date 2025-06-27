@@ -26,9 +26,9 @@ const RequestList = () => {
   const [statusFilter, setStatusFilter] = useState(
     ['Pending', 'Approved', 'Rejected'].includes(status) ? status : '',
   )
-  const requestType = searchParams.get('request_type') || 'Pending Requests'
+  const requestType = searchParams.get('request_type') || 'Requests I Oversee'
   const [requestTypeFilter, setRequestTypeFilter] = useState(
-    ['My Requests', 'Pending Requests'].includes(requestType)
+    ['My Requests', 'Requests I Oversee'].includes(requestType)
       ? requestType
       : '',
   )
@@ -106,7 +106,9 @@ const RequestList = () => {
               >
                 <MenuItem value="">All</MenuItem>
                 <MenuItem value="My Requests">My Requests</MenuItem>
-                <MenuItem value="Pending Requests">Pending Requests</MenuItem>
+                <MenuItem value="Requests I Oversee">
+                  Requests I Oversee
+                </MenuItem>
               </Select>
             </FormControl>
           )}

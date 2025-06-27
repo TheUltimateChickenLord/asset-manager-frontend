@@ -12,7 +12,7 @@ export const getRoles = async (): Promise<string[]> => {
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const assignRole = async (
@@ -35,7 +35,7 @@ export const assignRole = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
 
 export const removeRole = async (
@@ -54,5 +54,5 @@ export const removeRole = async (
   if (response.ok) {
     return json
   }
-  throw json.details
+  throw json.detail
 }
