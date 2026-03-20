@@ -7,7 +7,7 @@ export interface Asset {
   purchase_date: string
   purchase_cost: number
   created_at: string
-  last_maintenance: string
+  last_maintenance: string | null
   maintenance_rate: number
   is_deleted: boolean
   linked_assets: LinkedAsset[]

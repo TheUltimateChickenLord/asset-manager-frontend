@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const logout = async () => {
     await logoutUser()
     setUser(null)
-    localStorage.removeItem('user')
     localStorage.removeItem('login expiry')
   }
 

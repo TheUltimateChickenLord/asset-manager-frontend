@@ -36,4 +36,7 @@ export const loginUser = async (
   }
 }
 
-export const logoutUser = async () => {}
+export const logoutUser = async () => {
+  localStorage.removeItem('jwt')
+  localStorage.removeItem('user')
+}

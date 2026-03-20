@@ -116,11 +116,11 @@ const Dashboard = () => {
     useCallback(() => getDashboards(user!), [user]),
   )
 
-  if (loading || !dashboards) return <></>
   if (error)
     return (
       <Alert severity="error">There was an error loading your content</Alert>
     )
+  if (loading || !dashboards) return <></>
 
   return (
     <Container>
