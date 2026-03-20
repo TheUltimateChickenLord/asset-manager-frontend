@@ -6,19 +6,22 @@ import AppRoutes from './routes/AppRoutes'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { HistoryProvider } from './context/HistoryContext'
+import RenderPoll from './components/RenderPoll'
 
 function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <ThemeProviderCustom>
         <CssBaseline />
-        <AuthProvider>
-          <Router>
-            <HistoryProvider>
-              <AppRoutes />
-            </HistoryProvider>
-          </Router>
-        </AuthProvider>
+        <RenderPoll>
+          <AuthProvider>
+            <Router>
+              <HistoryProvider>
+                <AppRoutes />
+              </HistoryProvider>
+            </Router>
+          </AuthProvider>
+        </RenderPoll>
       </ThemeProviderCustom>
     </LocalizationProvider>
   )
