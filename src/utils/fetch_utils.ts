@@ -2,6 +2,7 @@ export function runFetch(input: RequestInfo | URL, init?: RequestInit) {
   const jwt = localStorage.getItem('jwt') || ''
 
   if (init == undefined) init = {}
+  else init = structuredClone(init)
 
   if (init.headers == undefined) init.headers = {}
 
