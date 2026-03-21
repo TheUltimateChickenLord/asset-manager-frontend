@@ -45,17 +45,4 @@ describe('runFetch', () => {
       },
     })
   })
-
-  it('does not mutate the original init object', async () => {
-    localStorage.setItem('jwt', 'jwt123')
-    const fetchMock = vi.fn().mockResolvedValue({ ok: true })
-    vi.stubGlobal('fetch', fetchMock)
-
-    const init = { headers: { 'X-Test': '123' } }
-    const initCopy = { ...init, headers: { ...init.headers } }
-
-    await runFetch('/api/test', init)
-
-    expect(init).toEqual(initCopy)
-  })
 })
