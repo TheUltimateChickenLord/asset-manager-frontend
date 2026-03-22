@@ -66,7 +66,7 @@ export const checkOutAssetByRequest = async (
   const response = await runFetch(
     `${
       import.meta.env.VITE_BACKEND_URL
-    }/api/assignments/check-in/${request_id}/`,
+    }/api/assignments/check-out/${request_id}/`,
     {
       method: 'POST',
       headers: {
